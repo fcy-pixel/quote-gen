@@ -445,7 +445,7 @@ async function callExtractAPI(payload) {
 }
 
 // ── Fill form fields ──────────────────────────────────────────────────
-function stripRMB(s) { return s ? s.replace(/^RMB\s*/i, '').replace(/¥/g, '') : s; }
+function stripRMB(s) { return s ? s.replace(/RMB/gi, '').replace(/¥/g, '').trim() : s; }
 
 function fillSupplierRow(idx, data) {
   if (data['供應商名稱']) document.getElementById('s' + idx + '-name').value  = data['供應商名稱'];
