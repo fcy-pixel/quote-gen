@@ -139,19 +139,19 @@
   <div class="grid grid-2">
     <div>
       <label>申請人姓名</label>
-      <input id="申請人姓名" type="text" placeholder="例：馮志遠">
+      <input id="申請人姓名" type="text" placeholder="例：陳大文">
     </div>
     <div>
       <label>申請人職務</label>
-      <input id="申請人職務" type="text" placeholder="例：數字教育統籌主任">
+      <input id="申請人職務" type="text" placeholder="例：中文科科主任">
     </div>
     <div>
       <label>申請人職級</label>
-      <input id="申請人職級" type="text" value="PSM" placeholder="例：PSM">
+      <input id="申請人職級" type="text" value="" placeholder="例：APSM">
     </div>
     <div>
       <label>支付來源</label>
-      <input id="支付來源" type="text" placeholder="例：支援開設小學科學科的一筆過津貼">
+      <input id="支付來源" type="text" placeholder="例：全方位學習津貼">
     </div>
   </div>
 </div>
@@ -162,7 +162,7 @@
   <div class="grid grid-2">
     <div>
       <label>物品名稱</label>
-      <input id="物品名稱" type="text" placeholder="例：戶外折疊月亮椅">
+      <input id="物品名稱" type="text" placeholder="物品名稱">
     </div>
     <div>
       <label>所需數量</label>
@@ -170,12 +170,12 @@
     </div>
     <div>
       <label>物品用途</label>
-      <input id="物品用途" type="text" placeholder="例：科學科課堂">
+      <input id="物品用途" type="text" placeholder="例：中文科課堂">
       <p class="hint">會顯示為「用作學校＿＿用途」</p>
     </div>
     <div>
       <label>預計費用</label>
-      <input id="預計費用" type="text" placeholder="例：RMB¥1000">
+      <input id="預計費用" type="text" placeholder="例：$1000">
     </div>
   </div>
 </div>
@@ -197,16 +197,16 @@
       <tbody id="supplier-tbody">
         <tr>
           <td style="text-align:center;font-weight:700">1</td>
-          <td><input type="text" placeholder="例：營客旗艦店" oninput="syncRecommended()"></td>
-          <td><input type="text" placeholder="例：19685243205"></td>
-          <td><input type="text" placeholder="例：¥920"></td>
+          <td><input type="text" placeholder="供應商名稱" oninput="syncRecommended()"></td>
+          <td><input type="text" placeholder="電話（選填）"></td>
+          <td><input type="text" placeholder="例：$1000"></td>
           <td class="adopted-cell"><input type="radio" name="adopted" value="0" checked></td>
         </tr>
         <tr>
           <td style="text-align:center;font-weight:700">2</td>
-          <td><input type="text" placeholder="例：精品户外阿良"></td>
-          <td><input type="text" placeholder="（選填）"></td>
-          <td><input type="text" placeholder="例：¥1484"></td>
+          <td><input type="text" placeholder="供應商名稱"></td>
+          <td><input type="text" placeholder="電話（選填）"></td>
+          <td><input type="text" placeholder="例：$1000"></td>
           <td class="adopted-cell"><input type="radio" name="adopted" value="1"></td>
         </tr>
       </tbody>
