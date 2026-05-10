@@ -445,10 +445,12 @@ async function callExtractAPI(payload) {
 }
 
 // ── Fill form fields ──────────────────────────────────────────────────
+function stripRMB(s) { return s ? s.replace(/^RMB\s*/i, '') : s; }
+
 function fillSupplierRow(idx, data) {
   if (data['供應商名稱']) document.getElementById('s' + idx + '-name').value  = data['供應商名稱'];
   if (data['聯絡電話'])   document.getElementById('s' + idx + '-phone').value = data['聯絡電話'];
-  if (data['總價'])       document.getElementById('s' + idx + '-price').value = data['總價'];
+  if (data['總價'])       document.getElementById('s' + idx + '-price').value = stripRMB(data['總價']);
 }
 
 function prefillItemFields(data) {
@@ -517,7 +519,7 @@ async function downloadDocx() {
     '申請人職級':   v('申請人職級'),
     '物品名稱':     v('物品名稱'),
     '物品用途':     v('物品用途'),
-    '預計費用':     v('預計費用'),
+    '預計費用':     stripRMB(v('預計費用')),
     '推薦供應商':   adopted.name,
     '物品數量':     v('物品數量'),
     '供應商1_總價': adopted.price,
